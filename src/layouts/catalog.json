@@ -1,0 +1,20 @@
+{
+  "sourceDefault": "en-US-qwerty",
+  "implemented": [
+    { "id": "en-US-qwerty", "language": "en", "name": "US QWERTY" },
+    { "id": "ar-101", "language": "ar", "name": "Arabic 101" },
+    { "id": "ru-standard", "language": "ru", "name": "Russian ЙЦУКЕН" },
+    { "id": "de-qwertz", "language": "de", "name": "German QWERTZ" },
+    { "id": "fr-azerty", "language": "fr", "name": "French AZERTY" },
+    { "id": "tr-q", "language": "tr", "name": "Turkish Q" },
+    { "id": "he-standard", "language": "he", "name": "Hebrew" },
+    { "id": "el-standard", "language": "el", "name": "Greek" },
+    { "id": "es-latam", "language": "es", "name": "Spanish Latin American" },
+    { "id": "it-standard", "language": "it", "name": "Italian" },
+    { "id": "pt-abnt", "language": "pt", "name": "Portuguese Brazil" },
+    { "id": "uk-standard", "language": "uk", "name": "Ukrainian" },
+    { "id": "fa-standard", "language": "fa", "name": "Persian" }
+  ],
+  "planned": [],
+  "outOfScope": ["zh-pinyin", "ja-ime", "ko-ime"]
+}

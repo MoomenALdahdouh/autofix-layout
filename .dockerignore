@@ -1,0 +1,17 @@
+.git
+.github
+.venv
+backend/.venv
+backend/.env
+.env
+.env.*
+node_modules
+dist
+dist-ssr
+**/__pycache__
+**/*.pyc
+**/.pytest_cache
+**/*.log
+site
+*.md
+!ARCHITECTURE.md

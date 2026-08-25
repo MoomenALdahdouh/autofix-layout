@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layfix — Test pad</title>
+    <style>
+      :root {
+        font-family: Inter, system-ui, sans-serif;
+        color: #102;
+        background: #f6f3ee;
+      }
+      body {
+        max-width: 720px;
+        margin: 40px auto;
+        padding: 0 16px;
+      }
+      h1 { font-size: 28px; margin-bottom: 8px; }
+      p, li { line-height: 1.5; }
+      code { background: #fff; padding: 0 4px; border-radius: 4px; }
+      label { display: block; font-weight: 600; margin: 18px 0 6px; }
+      input, textarea, [contenteditable] {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background: #fff;
+        font: 18px/1.5 ui-sans-serif, system-ui;
+      }
+      [contenteditable] { min-height: 88px; }
+      .examples { background: #fff; border-radius: 12px; padding: 12px 16px; }
+    </style>
+  </head>
+  <body>
+    <h1>Layfix test pad</h1>
+    <p>
+      Keep the keyboard on <strong>English</strong>. Type a token, then press
+      <strong>Space</strong>. Arabic-on-QWERTY words should flip; real English should stay.
+    </p>
+    <div class="examples">
+      <p>Try these, each followed by Space:</p>
+      <ul>
+        <li><code>hsjo]lj</code> → استخدمت</li>
+        <li><code>hgjwldl</code> → التصميم</li>
+        <li><code>td</code> → في</li>
+        <li><code>React</code> stays React</li>
+          <li>Full line: <code>hsjo]lj React td hgjwldl</code> → استخدمت React في التصميم</li>
+        <li>Optional Russian (enable ЙЦУКЕН in the popup): <code>ghbdtn</code> → привет</li>
+      </ul>
+    </div>
+
+    <label for="single">Input</label>
+    <input id="single" type="text" placeholder="hsjo]lj " />
+
+    <label for="area">Textarea</label>
+    <textarea id="area" rows="4" placeholder="hsjo]lj React td hgjwldl "></textarea>
+
+    <label>Contenteditable</label>
+    <div contenteditable="true"></div>
+  </body>
+</html>

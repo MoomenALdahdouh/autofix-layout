@@ -1,0 +1,36 @@
+{
+  "name": "autofix-layout",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "LAYFIX_BROWSER=chrome vite",
+    "build": "npm run build:chrome",
+    "build:chrome": "LAYFIX_BROWSER=chrome tsc -b && LAYFIX_BROWSER=chrome vite build",
+    "build:edge": "LAYFIX_BROWSER=edge tsc -b && LAYFIX_BROWSER=edge vite build",
+    "build:all": "npm run build:chrome && npm run build:edge",
+    "pack:chrome": "npm run build:chrome && python3 -c \"import shutil; shutil.make_archive('store/layfix-chrome', 'zip', 'dist/chrome')\"",
+    "pack:edge": "npm run build:edge && python3 -c \"import shutil; shutil.make_archive('store/layfix-edge', 'zip', 'dist/edge')\"",
+    "watch": "LAYFIX_BROWSER=chrome vite build --watch",
+    "test": "vitest run",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.7.1",
+    "@types/chrome": "^0.2.7",
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "happy-dom": "^20.11.6",
+    "oxlint": "^1.75.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.0",
+    "vitest": "^4.1.11"
+  }
+}

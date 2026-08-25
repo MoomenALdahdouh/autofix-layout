@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Layfix</title>
+    <link rel="icon" href="../icons/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <header data-header></header>
+    <main class="legal-doc wrap">
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: [DATE]</p>
+      <p class="note">This policy describes the Layfix browser extension and this website as implemented today. Placeholders mark information that is not yet assigned. This is not legal advice.</p>
+
+      <h2>Who we are</h2>
+      <p>[LEGAL COMPANY NAME], [BUSINESS ADDRESS], [COUNTRY]. Contact: [SUPPORT EMAIL].</p>
+
+      <h2>What Layfix is</h2>
+      <p>Layfix restores text typed on the wrong keyboard layout. It is not a translator, spellchecker, or account social network. You can use the Free plan without creating an account.</p>
+
+      <h2>What we do not collect</h2>
+      <p>The extension does not collect your browsing history, the page URL, the full page, passwords, or analytics about how you use websites. This website does not use analytics and does not set advertising cookies.</p>
+
+      <h2>Data processed on your device</h2>
+      <p>Settings, enabled keyboards, pause state, a never-correct list, a short local correction history, a local classification cache, trial/usage timestamps, and (if you activate Pro) a license key are stored with the browser’s extension storage (Chrome and Microsoft Edge). Manual converter text is ephemeral: it is not saved when you close the popup.</p>
+
+      <h2>When text may leave your device</h2>
+      <p>Manual conversion is computed on your device and is not sent to us.</p>
+      <p>Automatic correction first tries a local decision. If that is not enough, the extension’s background worker may send this payload to the Layfix API:</p>
+      <ul>
+        <li>the word being checked</li>
+        <li>up to a few nearby words, after a safety filter (secrets, URLs, and similar tokens are dropped)</li>
+        <li>your source keyboard and enabled keyboard IDs</li>
+        <li>a license key, if you have one</li>
+      </ul>
+      <p>The API may forward that classification request to Groq. Groq is asked only to classify the token (valid, uncertain, or wrong layout). It is not asked to translate or invent replacement text. The letters written back into the field are computed locally from keyboard maps.</p>
+      <p>If the API is unreachable, automatic correction simply does nothing extra. Your typing still works.</p>
+
+      <h2>Payments and licenses</h2>
+      <p>Pro licenses are validated with Lemon Squeezy. Lemon Squeezy processes payment and license validation according to their own policies. Layfix stores the license key you paste so the extension can prove the subscription. We do not put payment-card numbers in the extension.</p>
+
+      <h2>Cookies</h2>
+      <p>This marketing site does not use analytics or advertising cookies. If that changes, this policy will be updated.</p>
+
+      <h2>Retention</h2>
+      <p>Local extension data stays until you remove the extension or clear it. Classification results may be cached temporarily on your device and, for a limited time, on the API to avoid repeat requests. We do not use your words to train a custom model.</p>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li><strong>storage</strong> — save settings, cache, and usage state.</li>
+        <li><strong>activeTab</strong> — let you exclude the site you are looking at.</li>
+        <li><strong>clipboardWrite</strong> — copy converted text when you click the result.</li>
+        <li><strong>Host access for the API</strong> — send the classification payload above, in development to localhost and in production to the configured API host.</li>
+        <li><strong>Access to text fields on websites</strong> — detect a finished word in supported inputs so automatic correction can run. Layfix does not rewrite passwords, hidden fields, or many code-like tokens.</li>
+      </ul>
+
+      <h2>Your choices</h2>
+      <p>Turn automatic correction off. Use only the manual converter. Exclude a website. Add never-correct words. Uninstall the extension to remove local data we stored there.</p>
+
+      <h2>Children</h2>
+      <p>Layfix is not directed at children.</p>
+
+      <h2>Changes</h2>
+      <p>If the product starts collecting something new, this page will say so.</p>
+
+      <h2>Contact</h2>
+      <p>[SUPPORT EMAIL]</p>
+    </main>
+    <footer data-footer></footer>
+    <script type="module" src="js/site.js"></script>
+  </body>
+</html>

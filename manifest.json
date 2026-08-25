@@ -1,0 +1,57 @@
+{
+  "manifest_version": 3,
+  "name": "Layfix",
+  "description": "Forgot to switch your keyboard? Layfix restores the text you meant to type.",
+  "version": "0.1.0",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "Layfix",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background.ts",
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "src/testpad/index.html",
+    "open_in_tab": true
+  },
+  "permissions": ["storage", "activeTab", "clipboardWrite"],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "http://127.0.0.1:8001/*",
+    "http://127.0.0.1:8002/*",
+    "http://127.0.0.1:8003/*",
+    "http://localhost:8000/*",
+    "http://localhost:8001/*",
+    "http://localhost:8002/*",
+    "http://localhost:8003/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content_script.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "commands": {
+    "FIX_CURRENT_TEXT": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+P",
+        "mac": "Command+Shift+P"
+      },
+      "description": "Fix selected or current text (keyboard layout)"
+    }
+  }
+}
